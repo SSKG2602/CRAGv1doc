@@ -1,0 +1,89 @@
+
+/* ChronoRAG Docs Theme — Brand Dark Gradient */
+/* Place this file next to chronorag_visuals.html as documentation.css */
+
+:root{
+  --bg:#0B0E12;
+  --bg-elev:#0E1218;
+  --bg-secondary:#0C1016;
+  --txt:#E6F1FF;
+  --txt-secondary:#9AA7B8;
+  --brand:#34E89E;          /* teal */
+  --brand-2:#0F3443;        /* deep charcoal/teal base */
+  --accent-1:#00E5FF;       /* cyan wires */
+  --accent-2:#BD34FE;       /* magenta wires */
+  --border:rgba(255,255,255,0.08);
+  --card:rgba(255,255,255,0.04);
+  --shadow:0 8px 24px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--txt);
+  background:
+    radial-gradient(1200px 800px at 80% 90%, rgba(13, 28, 35, .9), transparent 60%),
+    linear-gradient(135deg, var(--brand-2) 0%, #0A0D12 30%, #0A0D12 70%, #0A0D12 100%);
+  font: 15px/1.55 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  letter-spacing:.1px;
+}
+
+/* Optional background image layer for the cover.
+   Copy linkBimg3.png next to this CSS or update the URL. */
+.cover{
+  padding:72px 24px 32px;
+  background:
+    linear-gradient(180deg, rgba(15,52,67,.75) 0%, rgba(10,13,18,.92) 60%),
+    url("linkBimg3.png") center/cover no-repeat;
+  border-bottom:1px solid var(--border);
+}
+.cover .subtitle{color:var(--txt-secondary); margin:6px 0 18px}
+.badges{display:flex; gap:.5rem; flex-wrap:wrap}
+.badge{
+  font-size:12px; color:#CFEAF7; background:rgba(0,229,255,.08);
+  border:1px solid rgba(0,229,255,.25); padding:.25rem .5rem; border-radius:999px
+}
+
+h1,h2,h3{font-family:"Poppins","Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+h1{font-weight:700; letter-spacing:.3px; margin:0 0 8px}
+h2{font-weight:600; margin:0 0 12px}
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.toc{max-width:1120px; margin:16px auto 0; padding:0 16px}
+.toc ol{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.5rem 1rem; padding-left:18px}
+.toc li{color:var(--txt-secondary)}
+
+.fig{
+  max-width:1120px; margin:20px auto; padding:16px;
+  background:var(--card); border:1px solid var(--border); border-radius:14px;
+  box-shadow:var(--shadow);
+}
+.fig h2{display:flex; align-items:center; gap:.5rem}
+.fig h2::after{
+  content:""; flex:1; height:1px; background:linear-gradient(90deg, rgba(0,229,255,.6), rgba(189,52,254,.35), transparent);
+}
+
+/* SVG styling hooks */
+.node{ fill:#0A0D12; stroke:var(--accent-1); stroke-width:1.6; rx:10; ry:10 }
+.store{ fill:#0A0D12; stroke:#BD34FE; stroke-width:1.6; rx:12; ry:12 }
+.label{ fill:#DDE7FF; font-family:ui-monospace, Menlo, Consolas, monospace; font-size:12px }
+.arrow{ stroke:#A5B4FC; stroke-width:1.6; marker-end:url(#arrowhead) }
+.arrow2{ stroke:var(--accent-1); stroke-width:1.6; marker-end:url(#arrowhead) }
+.swim{ stroke:var(--border); stroke-width:1 }
+.laneLabel{ fill:var(--txt-secondary); font-size:12px }
+.legend{ fill:var(--txt-secondary); font-size:12px }
+
+.callout{
+  max-width:1120px; margin:24px auto 40px; padding:12px 16px;
+  color:#CFEAF7; background:rgba(0,229,255,.05);
+  border:1px dashed rgba(0,229,255,.35); border-radius:12px
+}
+.kbd{ background:#121826; border:1px solid var(--border); padding:.1rem .35rem; border-radius:6px }
+.mono{ font-family:ui-monospace, Menlo, Consolas, monospace }
+
+/* Scrollbar polish (WebKit) */
+::-webkit-scrollbar{height:10px;width:10px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12); border-radius:8px}
+::-webkit-scrollbar-track{background:transparent}
